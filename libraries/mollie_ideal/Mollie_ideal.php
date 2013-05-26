@@ -92,7 +92,7 @@ class Mollie_ideal {
     {
     	require_once('ideal.class.php');
     	
-    	$partner_id  = 319505; // Uw mollie partner ID
+    	$partner_id  = 111111; // Uw mollie partner ID
     	
 		$iDEAL = new iDEAL_Payment ($partner_id);
 		//$iDEAL->setTestMode();
