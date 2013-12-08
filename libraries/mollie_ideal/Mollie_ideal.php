@@ -18,6 +18,8 @@ class Mollie_ideal {
 
     var $partnerID = 'XXXXXX';
     var $testMode = true;
+    var $return_url = 'http://lichtopverlies.nl/bestel/ideal';
+    var $report_url = 'http://lichtopverlies.nl/bestel/ideal';
     
     function banklist()
     {
@@ -48,8 +50,8 @@ class Mollie_ideal {
           //$amount      = 118;    // Het af te rekenen bedrag in centen (!!!)
           //$description = 'Testbetaling'; // Beschrijving die consument op zijn/haar afschrift ziet.
           
-          $return_url  = 'http://lichtopverlies.nl/bestel/ideal'; // URL waarnaar de consument teruggestuurd wordt na de betaling
-          $report_url  = 'http://lichtopverlies.nl/bestel/ideal'; // URL die Mollie aanvraagt (op de achtergrond) na de betaling om de status naar op te sturen
+          $return_url  = $this->return_url; // URL waarnaar de consument teruggestuurd wordt na de betaling
+          $report_url  = $this->report_url; // URL die Mollie aanvraagt (op de achtergrond) na de betaling om de status naar op te sturen
           
           if (!in_array('ssl', stream_get_transports()))
           {
